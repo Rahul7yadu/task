@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-color: #ff6b82;
+  --border-color: #c8c8c8;
+  --title-font-size: 20px;
+  --primary-font-size: 14px;
+  --light-font-size: 12px;
+  --extralight-font-size: 10px;
+}
+
+.container {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin: auto auto;
+  width: 343px;
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: var(--title-font-size);
+  line-height: 24.2px;
+  display: flex;
+  justify-content: center;
+}
+.title-container {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+.horiz-line {
+  width: 91.65px;
+  height: 0;
+  border: 1px solid var(--border-color);
+}
+.box {
+  width: 341px;
+  height: 74.11px;
+  border: 0.9px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box .main {
+  width: 341px;
+  height: 74.11px;
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.expanded {
+  height: 174.11px;
+  border-color: var(--primary-color);
+}
+
+/* checkbox */
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 14.46px;
+  height: 14.46px;
+  border: 0.9px solid var(--border-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked + .checkmark::before {
+  content: "";
+  position: absolute;
+  width: 9.04px;
+  height: 9.04px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* checkbox */
+
+/* description section */
+.box .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box .description .units {
+  font-size: var(--primary-font-size);
+  font-weight: 600;
+}
+
+/* description section */
+.box .price {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: red; */
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.percentageBox {
+  background-color: var(--primary-color);
+  width: 55px;
+  height: 17px;
+  text-align: center;
+}
+
+.light {
+  font-size: var(--light-font-size);
+  font-weight: normal;
+}
+.extralight {
+  font-size: var(--extralight-font-size);
+  font-weight: normal;
+  text-decoration: line-through;
+  color: grey;
+}
+
+.options-wrapper {
+  /* align-self: end; */
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+}
+.show {
+  display: block;
+}
+.variant-selector {
+  display: flex;
+
+  width: 100%;
+
+  flex-direction: column;
+  align-items: start;
+  font-size: 11px;
+  color: #000;
+  font-weight: 400;
+}
+.selector-labels {
+  align-self: center;
+  display: flex;
+  width: 104px;
+  max-width: 100%;
+  gap: 20px;
+  font-size: 10px;
+  justify-content: space-between;
+}
+.variant-options {
+  display: flex;
+  margin-top: 7px;
+  width: 100%;
+  gap: 7px;
+}
+.size-select {
+  border-radius: 2px;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 6px 7px;
+  border: 1px solid #d9d9d9;
+}
+.size-label {
+  align-self: start;
+}
+.dropdown-arrow {
+  aspect-ratio: 1.25;
+  object-fit: contain;
+  object-position: center;
+  width: 5px;
+  margin: auto 0;
+}
+
+.delivery-total {
+  align-self: start;
+  display: flex;
+  margin-top: 15px;
+  gap: 40px 100px;
+  font: 500 14px Inter, sans-serif;
+}
+.free-delivery {
+  color: #ff6b82;
+}
+.total-amount {
+  color: #000;
+}
+.cart-button {
+  border-radius: 4px;
+  background-color: #ff6b82;
+  display: flex;
+  margin-top: 20px;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  justify-content: center;
+  padding: 12px 10px;
+  font: 500 12px Inter, sans-serif;
+}
+.cart-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  align-self: stretch;
+  margin: auto 0;
+}
+.cart-text {
+  align-self: stretch;
+  width: 68px;
+  margin: auto 0;
+}
+.footer-text {
+  color: rgba(0, 0, 0, 0.4);
+  align-self: end;
+  margin-top: 5px;
+  font: 400 12px Inter, sans-serif;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
